@@ -22,7 +22,7 @@ function plotMap() {
         .attr("width", svgWidth)
         .attr("height", svgHeight);
 
-    d3.json("file3new.geojson").then(function(ukData) {
+    d3.json("uk-map.geojson").then(function(ukData) {
         svg.selectAll("path")
             .data(ukData.features)
             .enter()
