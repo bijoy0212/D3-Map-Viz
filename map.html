@@ -4,11 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UK Population Map</title>
-    <link rel="stylesheet" href="/style/map.css">
+    <link rel="stylesheet" href="style/map.css">
     <script type="text/javascript" src="https://d3js.org/d3.v7.min.js"></script>
+    <script type="text/javascript" src="script/plotmap.js"></script>
+    <script type="text/javascript" src="script/onload.js"></script>
+    <script type="text/javascript" src="script/loaddata.js"></script>
 </head>
 <body>
+    <div class="column column-8" id="map-components">
+        <input type="text" id="townInput" placeholder="Towns">
+        <button id="updateDataButton">Update Data</button>
+        <button id="zoomInButton">Zoom In</button>
+        <button id="zoomOutButton">Zoom Out</button>
+    </div>
     
+    <div id="map-container">
+        <svg id="map"></svg>
+    </div>
 
+    <div id="tooltip">
+        <div class="county">
+            County: <span></span>
+        </div>
+        <div class="town">
+            Town: <span></span>
+        </div>
+        <div class="population">
+            Population: <span></span>
+        </div>
+    </div>
 </body>
 </html>

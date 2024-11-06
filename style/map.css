@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#map-container {
+    background-color:#AADAFF;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: auto; 
+    height: auto;
+}
+
+#townInput {
+    width: 200px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#updateDataButton {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#updateDataButton:hover {
+    background-color: #45a049;
+}
+
+#townInput, #updateDataButton {
+    margin: 10px;
+}
+
+#townInput:focus, #updateDataButton:focus {
+    outline: none;
+}
+
+#tooltip {
+    text-align: justify;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    position: absolute;
+    background-color:rgba(230, 212, 12, 0.5);
+    color:rgba(28, 3, 103, 0.5);
+    font-weight: bold;
+    display: none;
+}
+
+rect {
+    pointer-events: auto;
+}
+
+#tooltip.county{
+    text-decoration: underline;
+}
+
