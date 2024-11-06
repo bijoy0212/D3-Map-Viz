@@ -28,8 +28,8 @@ function plotMap() {
             .enter()
             .append("path")
             .attr("d", pathGenerator)
-            .attr("fill", "#999999")
-            .attr("stroke", "#ffffff")
+            .attr("fill", "#edf8e9")
+            .attr("stroke", "black")
             .attr("stroke-width", 0.5);
 
 
@@ -76,3 +76,4 @@ function plotMap() {
         console.error("Error loading GeoJSON data:", error);
     });
 }
+

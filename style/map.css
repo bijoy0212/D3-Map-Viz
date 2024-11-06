@@ -25,6 +25,7 @@ body {
     font-size: 16px;
 }
 
+
 #updateDataButton {
     padding: 10px 20px;
     background-color: #4CAF50;
@@ -49,13 +50,13 @@ body {
 
 #tooltip {
     text-align: justify;
-    border: 1px solid #ccc;
+    border: 1px solid #000000;
     padding: 10px;
     border-radius: 5px;
     font-size: 14px;
     position: absolute;
-    background-color:rgba(230, 212, 12, 0.5);
-    color:rgba(28, 3, 103, 0.5);
+    background-color:rgba(97, 180, 106, 0.8);
+    color:rgb(28, 3, 103);
     font-weight: bold;
     display: none;
 }
