@@ -45,7 +45,7 @@ function plotMap() {
             });
         
         // Disabled the zoom using the mouse scrolls and doubleclick to map to look stable
-        svg.call(zoom).on("dblclick.zoom", null).on("wheel.zoom", null);
+        svg.call(zoom).on("wheel.zoom", null);
         
         // Different event handlers for different buttons on the page
 
