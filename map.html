@@ -11,27 +11,43 @@
     <script type="text/javascript" src="script/loaddata.js"></script>
 </head>
 <body>
-    <div class="column column-8" id="map-components">
-        <input type="text" id="townInput" placeholder="Towns">
-        <button id="updateDataButton">Update Data</button>
-        <button id="zoomInButton">Zoom In</button>
-        <button id="zoomOutButton">Zoom Out</button>
-    </div>
+    <div>
+        <div id="map-components">
+            <div id="inputData">
+                <div class="sliderContainer">
+                    <label for="townInput">Adjust Town Size:</label>
+                    <input type="range" id="townInput" class="styledSlider" value="50" min="1" max="500" step="1" oninput="this.nextElementSibling.value = this.value">
+                    <output>50</output>
+                    <button id="updateDataButton">Update Data</button>
+                </div>
+            </div>
+            <div id="zoomButtons" class="zoombtn">
+                    <label for="zoomButtons">Adjust Zoom:</label>
+                    <button id="zoomInButton">Zoom In</button>
+                    <button id="zoomOutButton">Zoom Out</button>
+            </div>
+            <div id="choroplethBButton" class="choroplethbtn">
+                <label id="choroplethLabel">Choropleth County Map:</label>
+                <button id="choroplethButton">Switch Map</button>
+            </div>
+        </div>
+        
+        <div id="map-container">
+            <svg id="map"></svg>
+            <div id="tooltip">
+                <div class="county">
+                    County: <span></span>
+                </div>
+                <div class="town">
+                    Town: <span></span>
+                </div>
+                <div class="population">
+                    Population: <span></span>
+                </div>
+            </div>
+        </div>
     
-    <div id="map-container">
-        <svg id="map"></svg>
-    </div>
-
-    <div id="tooltip">
-        <div class="county">
-            County: <span></span>
-        </div>
-        <div class="town">
-            Town: <span></span>
-        </div>
-        <div class="population">
-            Population: <span></span>
-        </div>
+       
     </div>
 </body>
 </html>
