@@ -1,3 +1,5 @@
+
+// Initialise SVG settings, map projection, and zoom variables
 var svg;
 var projection;
 var currentTransform = d3.zoomIdentity;
@@ -8,6 +10,7 @@ const mapWidth = 950;
 const mapHeight = 800;
 const margin = 50;
 
+// Function to load and display the map with data
 function plotMap() {
     projection = d3.geoMercator()
         .center([-2.7, 55.4])
@@ -40,8 +43,11 @@ function plotMap() {
                 svg.selectAll("path").attr("transform", event.transform);
                 updateCirclePositions(svg, projection, currentTransform);
             });
-
+        
+        //Disabled the zoom using the mouse scrolls and doubleclick to map to look stable
         svg.call(zoom).on("dblclick.zoom", null).on("wheel.zoom", null);
+        
+        //Different event handlers for different buttons on the page
 
         d3.select("#zoomInButton").on("click", function() {
             svg.transition().call(zoom.scaleBy, 1.2);
