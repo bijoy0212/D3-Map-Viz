@@ -60,5 +60,5 @@ This project provides a dynamic and interactive population visualization of the 
    A collection of D3 examples on ObservableHQ that demonstrate various zoom techniques and interactions, suitable for maps and other visualizations.
 
 7. **[CodePen - Interactive D3 Map Example](https://codepen.io/bwiacek/pen/pXZEvK)**  
-   A CodePen example by Bwiacek demonstrating an interactive map built with D3, showcasing a basic approach to map interactions and data integration.
+   A CodePen example by Barbara Wiacek demonstrating an interactive map built with D3, showcasing a basic approach to map interactions and data integration.
 

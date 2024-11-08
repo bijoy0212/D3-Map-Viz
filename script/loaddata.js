@@ -123,9 +123,26 @@ function loadData(svg, projection, town = 50) {
                     tooltip.select(".county span").text(countyName);
                     tooltip.select(".town span").text("");
                     tooltip.select(".population span").text(population);
+
+                    // Adding the highlight effect on the part of the map selected
+                    d3.selectAll("path")
+                    .transition()
+                    .duration(300)
+                    .style("opacity", 0.3);
+
+                    d3.select(this)
+                    .transition()
+                    .duration(300)
+                    .style("opacity", 1);
+
                 })
                 .on("mouseout", function() {
+                    // Removing the highlight effect and tooltip when the part of the map is not selected
                     tooltip.style("display", "none");
+                    d3.selectAll("path")
+                    .transition()
+                    .duration(300)
+                    .style("opacity", 1);
                 });
         }
 
