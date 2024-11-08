@@ -1,3 +1,6 @@
+
+/* Basic layout settings for the page and the map elements */
+
 body {
     display: flex;
     height: 100vh;
@@ -62,6 +65,7 @@ output {
     outline: none;
 }
 
+ /* Tooltip styling for the interactivity */
 #tooltip {
     text-align: justify;
     border: 1px solid #000000;
