@@ -4,7 +4,7 @@ let populationCircleExtent = {};
 let populationChoroExtent = {};
 let colorScale = {};
 
-// Function to load town/county population data dynamically
+// Function to load town/county population data dynamically 
 function loadData(svg, projection, town = 50) {
     d3.json(`http://34.147.162.172/Circles/Towns/${town}`).then(function(circleData) {
         const tooltip = d3.select("#tooltip");
