@@ -1,5 +1,5 @@
 
-// Initialise SVG settings, map projection, and zoom variables
+// Initialise SVG settings, map projection, and zoom variables 
 var svg;
 var projection;
 var currentTransform = d3.zoomIdentity;
