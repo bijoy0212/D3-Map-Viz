@@ -14,7 +14,7 @@ This project provides a dynamic and interactive population visualization of the 
 
 ## Files Overview
 
-- **`map.html`**: HTML file for the UK Population Map webpage layout and structure. Includes:
+- **`index.html`**: HTML file for the UK Population Map webpage layout and structure. Includes:
   - Map components (buttons, sliders, SVG container).
   - Scripts for loading data, plotting the map, and interactive elements.
 
