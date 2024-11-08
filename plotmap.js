@@ -44,7 +44,7 @@ function plotMap() {
                 updateCirclePositions(svg, projection, currentTransform);
             });
         
-        // Disabled the zoom using the mouse scrolls and doubleclick to map to look stable
+        // Disabled the zoom using the mouse scrolls to map to look stable
         svg.call(zoom).on("wheel.zoom", null);
         
         // Different event handlers for different buttons on the page
