@@ -3,8 +3,7 @@ let populationCircleExtent = {};
 let populationChoroExtent = {};
 let colorScale = {};
 function loadData(svg, projection, town = 50) {
-    const url = `http://34.147.162.172/Circles/Towns/${town}?callback=callback`;
-    d3.json(url).then(function(circleData) {
+    d3.json(`http://34.147.162.172/Circles/Towns/${town}`).then(function(circleData) {
         const tooltip = d3.select("#tooltip");
 
         const countyPopulation = d3.rollup(
