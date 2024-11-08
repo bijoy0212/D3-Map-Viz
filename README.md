@@ -39,3 +39,26 @@ This project provides a dynamic and interactive population visualization of the 
    ```bash
    git clone https://github.com/bijoy0212/D3-Map-Viz.git
 
+## References
+
+1. **[D3 Graph Gallery - Background Maps](https://d3-graph-gallery.com/backgroundmap.html)**  
+   A comprehensive guide to creating various background maps with D3, including tutorials on different projections, geoJSON data usage, and interactive features.
+
+2. **[D3.js Official Documentation](https://d3js.org/)**  
+   The official documentation for D3.js, detailing the API and providing examples for data-driven document manipulation and visualization.
+
+3. **[GitHub - D3 Map Tutorial by Woojin Kim](https://github.com/woojink/d3-map-tutorial)**  
+   A GitHub tutorial by Woojin Kim with code examples on building interactive maps using D3, covering basic setup, projection, and data integration.
+
+4. **[Soshace - Mapping the World with D3](https://soshace.com/2020/01/21/mapping-the-world-creating-beautiful-maps-and-populating-them-with-data-using-d3-js/)**  
+   A detailed tutorial from Soshace on creating maps using D3.js, focusing on projection setups and basic data plotting.
+
+5. **[Soshace - Advanced Mapmaking with D3](https://soshace.com/2020/03/11/advanced-mapmaking-using-d3-d3-scale-and-d3-zoom-with-changing-data-to-create-sophisticated-maps/)**  
+   A continuation of the Soshace mapmaking tutorial, focusing on advanced features like D3 scaling, zoom, and dynamic data integration.
+
+6. **[Observable - D3 Zoom Collection](https://observablehq.com/collection/@d3/d3-zoom)**  
+   A collection of D3 examples on ObservableHQ that demonstrate various zoom techniques and interactions, suitable for maps and other visualizations.
+
+7. **[CodePen - Interactive D3 Map Example](https://codepen.io/bwiacek/pen/pXZEvK)**  
+   A CodePen example by Bwiacek demonstrating an interactive map built with D3, showcasing a basic approach to map interactions and data integration.
+
