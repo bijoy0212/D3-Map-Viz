@@ -4,7 +4,7 @@ let populationCircleExtent = {};
 let populationChoroExtent = {};
 let colorScale = {};
 
-//Function to load town/county population data dynamically
+// Function to load town/county population data dynamically
 function loadData(svg, projection, town = 50) {
     d3.json(`http://34.147.162.172/Circles/Towns/${town}`).then(function(circleData) {
         const tooltip = d3.select("#tooltip");
@@ -18,7 +18,7 @@ function loadData(svg, projection, town = 50) {
         svg.selectAll("circle").remove();
         svg.selectAll("path").attr("fill", "#edf8e9");
 
-        //Condition to load town population data on the map in the form of dynamic circles with varying radius and color variants
+        // Condition to load town population data on the map in the form of dynamic circles with varying radius and color variants
 
         if (!colorScaleMode) {
             populationCircleExtent = d3.extent(circleData, d => d.Population);
@@ -95,7 +95,7 @@ function loadData(svg, projection, town = 50) {
             tooltip.style('display', 'none');
         });
 
-        //Condition to load county population data on the map in the form of choropleth map with varying color variants
+        // Condition to load county population data on the map in the form of choropleth map with varying color variants
 
         } else {
             populationChoroExtent = d3.extent(Array.from(countyPopulation.values()));
@@ -134,7 +134,7 @@ function loadData(svg, projection, town = 50) {
     });
 }
 
-//Function to get the county population from the JSON feed based on similarity with the GeoJson file variable NAME_2 and NAME_3
+// Function to get the county population from the JSON feed based on similarity with the GeoJson file variable NAME_2 and NAME_3
 
 function getCountyPopulation(d, countyPopulation) {
     const name2 = d.properties.NAME_2;
@@ -150,7 +150,7 @@ function getCountyPopulation(d, countyPopulation) {
     return population;
 }
 
-//Function to handle the legend logic for the page to change dynamically based on each new data refresh
+// Function to handle the legend logic for the page to change dynamically based on each new data refresh
 
 function createLegend(svg, colorScale, populationExtent) {
     const legendWidth = 300;
@@ -195,7 +195,7 @@ function createLegend(svg, colorScale, populationExtent) {
         .text(`Max: ${Math.round(populationExtent[1])}`);
 }
 
-//Function to update the text next to the Switch Map button based on the map type its currently showing
+// Function to update the text next to the Switch Map button based on the map type its currently showing
 
 function updateMapLabel() {
     const mapLabel = document.getElementById("choroplethLabel");
