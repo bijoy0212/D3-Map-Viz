@@ -5,11 +5,12 @@ This project provides a dynamic and interactive population visualization of the 
 ## Features
 
 - **Town Size Adjustment**: Users can adjust the visualization to display population circles with different sizes.
-- **Zoom Controls**: Users can zoom in and out to inspect population data at different levels.
+- **Zoom Controls**: Users can zoom in and out to inspect population data at different levels using the buttons. Double-clicking on the map is also enabled to zoom into specific areas.
 - **Map Style Toggle**: Users can switch between two map visualization modes:
   - **Town Circle Map**: Displays circles sized by town populations.
   - **County Choropleth Map**: Uses color intensity to represent population density by county.
 - **Interactive Tooltip**: Shows details of each county or town, including population information.
+- **Hover Highlight**: Highlights a county in the choropleth map when hovered over, fading other counties to help focus on the selected region.
 - **Smooth Animations**: Circle animations enhance the visual appeal and readability of the map data.
 
 ## Files Overview
