@@ -1,8 +1,8 @@
 body {
     display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
+    width: 100vw;
+    flex-direction: column;
     margin: 0;
 }
 
@@ -11,26 +11,40 @@ body {
     display:flex;
     justify-content: center;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: auto; 
-    height: auto;
 }
 
-#townInput {
-    width: 200px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
 }
+
+#inputData label {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+#inputData {
+    margin: 20px;
+}
+
+
+output {
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: bold;
+    color: #333;
+    font-size: 16px;
+} 
+
 
 
 #updateDataButton {
     padding: 10px 20px;
-    background-color: #4CAF50;
+    background-color: #0a557d;
     color: white;
-    border: none;
+    border: Chrome 1;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
@@ -69,3 +83,75 @@ rect {
     text-decoration: underline;
 }
 
+#zoomInButton {
+    padding: 10px 20px;
+    background-color: #9f0655;  
+    color: white;
+    border: Chrome 1;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#zoomOutButton {
+    padding: 10px 20px;
+    background-color: #9f0655;
+    color: white;
+    border: Chrome 1;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#zoomInButton:hover {
+    background-color: #45a049;
+}
+
+#zoomOutButton:hover {
+    background-color: #45a049;
+}
+
+#zoomInButton, #zoomOutButton {
+    margin: 10px;
+}
+
+#zoomInButton:focus, #zoomOutButton:focus {
+    outline: none;
+}
+
+#choroplethButton {
+    padding: 10px 20px;
+    background-color: #1f3090;
+    color: white;
+    border: Chrome 1;;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#choroplethButton:hover {
+    background-color: #45a049;
+}
+
+.zoombtn label {
+    font-weight: bold;
+    margin-right: 8px;
+}
+
+.choroplethbtn{
+    padding: 10px 20px;
+}
+
+.choroplethbtn label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+
+#map-components{
+    background-color: rgb(210, 83, 219);
+    display: flex;
+  
+    justify-content: center;
+    align-items: center;
+}

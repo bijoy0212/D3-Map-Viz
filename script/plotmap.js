@@ -9,8 +9,6 @@ const mapHeight = 800;
 const margin = 50;
 
 function plotMap() {
-    console.log("Start:", currentTransform);
-
     projection = d3.geoMercator()
         .center([-2.7, 55.4])
         .translate([mapWidth / 2, mapHeight / 2])
@@ -32,7 +30,6 @@ function plotMap() {
             .attr("stroke", "black")
             .attr("stroke-width", 0.5);
 
-
         loadData(svg, projection, town);
 
         const zoom = d3.zoom()
@@ -40,7 +37,6 @@ function plotMap() {
             .translateExtent([[0, 0], [mapWidth, mapHeight]])
             .on("zoom", (event) => {
                 currentTransform = event.transform;
-                console.log("Start:", currentTransform);
                 svg.selectAll("path").attr("transform", event.transform);
                 updateCirclePositions(svg, projection, currentTransform);
             });
@@ -48,12 +44,10 @@ function plotMap() {
         svg.call(zoom).on("dblclick.zoom", null).on("wheel.zoom", null);
 
         d3.select("#zoomInButton").on("click", function() {
-            console.log("Zoom in button clicked");
             svg.transition().call(zoom.scaleBy, 1.2);
         });
 
         d3.select("#zoomOutButton").on("click", function() {
-            console.log("Zoom out button clicked");
             svg.transition().call(zoom.scaleBy, 0.8);
         });
 
@@ -62,18 +56,21 @@ function plotMap() {
             loadData(svg, projection, town);
         });
 
+        d3.select("#choroplethButton").on("click", function() {
+            colorScaleMode = !colorScaleMode;
+            svg.selectAll("path").on("mouseover", null).on("mouseout", null);
+            svg.selectAll("circle").on("mouseover", null).on("mouseout", null);
+            loadData(svg, projection, town);
+            updateMapLabel()
+        });
+
         function updateCirclePositions(svg, projection, transform) {
             svg.selectAll("circle")
-                .attr("cx", function(d) {
-                    return transform.applyX(projection([d.lng, d.lat])[0]);
-                })
-                .attr("cy", function(d) {
-                    return transform.applyY(projection([d.lng, d.lat])[1]);
-                });
+                .attr("cx", d => transform.applyX(projection([d.lng, d.lat])[0]))
+                .attr("cy", d => transform.applyY(projection([d.lng, d.lat])[1]));
         }
 
     }).catch(function(error) {
         console.error("Error loading GeoJSON data:", error);
     });
 }
-
