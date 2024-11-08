@@ -44,10 +44,10 @@ function plotMap() {
                 updateCirclePositions(svg, projection, currentTransform);
             });
         
-        //Disabled the zoom using the mouse scrolls and doubleclick to map to look stable
+        // Disabled the zoom using the mouse scrolls and doubleclick to map to look stable
         svg.call(zoom).on("dblclick.zoom", null).on("wheel.zoom", null);
         
-        //Different event handlers for different buttons on the page
+        // Different event handlers for different buttons on the page
 
         d3.select("#zoomInButton").on("click", function() {
             svg.transition().call(zoom.scaleBy, 1.2);
